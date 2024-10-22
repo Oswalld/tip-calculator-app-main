@@ -16,6 +16,11 @@ body {
   gap: 88px;
   min-height: 100vh;
 }
+@media screen and (max-width: 950px) {
+  body {
+    padding-top: 88px;
+  }
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -33,13 +38,22 @@ form label {
 }
 
 .calculator {
-  width: 920px;
+  max-width: 920px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 25px;
   display: flex;
   gap: 48px;
   padding: 32px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+@media screen and (max-width: 950px) {
+  .calculator {
+    flex-direction: column;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 24px;
+    gap: 0;
+  }
 }
 
 input[id=bill], input[id=people] {
@@ -53,6 +67,11 @@ input[id=bill], input[id=people] {
   color: #00474B;
   text-align: right;
   margin-top: 6px;
+}
+@media screen and (max-width: 950px) {
+  input[id=bill], input[id=people] {
+    margin-bottom: 32px;
+  }
 }
 input[id=bill]::-moz-placeholder, input[id=people]::-moz-placeholder {
   color: #9EBBBD;
@@ -72,6 +91,11 @@ input[id=bill]::placeholder, input[id=people]::placeholder {
   top: 50%;
   transform: translate(0, -30%);
 }
+@media screen and (max-width: 950px) {
+  .bill-input-after::after {
+    top: 31%;
+  }
+}
 
 .people-input-after::after {
   content: url("../images/icon-person.svg");
@@ -80,12 +104,23 @@ input[id=bill]::placeholder, input[id=people]::placeholder {
   top: 50%;
   transform: translate(0, -30%);
 }
+@media screen and (max-width: 950px) {
+  .people-input-after::after {
+    top: 30%;
+  }
+}
 
 .percent-options {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   margin-top: 16px;
+}
+@media screen and (max-width: 950px) {
+  .percent-options {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 32px;
+  }
 }
 .percent-options button {
   min-height: 48px;
@@ -95,6 +130,12 @@ input[id=bill]::placeholder, input[id=people]::placeholder {
   border: none;
   color: hsl(0, 0%, 100%);
   font-size: 24px;
+}
+@media screen and (max-width: 950px) {
+  .percent-options button {
+    max-width: 1000px;
+    min-width: 100px;
+  }
 }
 .percent-options button:hover {
   cursor: pointer;
@@ -109,6 +150,13 @@ input[id=bill]::placeholder, input[id=people]::placeholder {
   background-color: #F3F9FA;
   padding: 0 13px;
   text-align: right;
+}
+@media screen and (max-width: 950px) {
+  .percent-options input {
+    max-width: 200px;
+    width: auto;
+    min-width: 100px;
+  }
 }
 .percent-options input::-moz-placeholder {
   color: #547878;
@@ -141,6 +189,12 @@ input[id=bill]::placeholder, input[id=people]::placeholder {
   justify-content: space-between;
   color: hsl(0, 0%, 100%);
 }
+@media screen and (max-width: 950px) {
+  .result-container {
+    min-width: auto;
+    padding: 24px;
+  }
+}
 .result-container .person {
   color: #7F9D9F;
   font-size: 13px;
@@ -156,7 +210,7 @@ input[id=bill]::placeholder, input[id=people]::placeholder {
   justify-content: space-between;
 }
 .result-container button {
-  background-color: #26C2AE;
+  background-color: #0D686D;
   font-size: 20px;
   color: hsl(183, 100%, 15%);
   width: 100%;
@@ -166,5 +220,5 @@ input[id=bill]::placeholder, input[id=people]::placeholder {
 }
 .result-container button:hover {
   cursor: pointer;
-  background-color: #9FE8DF;
+  background-color: #9FE8DF !important;
 }/*# sourceMappingURL=main.css.map */
