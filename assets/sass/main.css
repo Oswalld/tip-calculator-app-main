@@ -218,6 +218,9 @@ input[id=bill]::placeholder, input[id=people]::placeholder {
   border-radius: 5px;
   border: none;
   max-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .result-container button:hover {
   cursor: pointer;

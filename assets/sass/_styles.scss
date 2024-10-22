@@ -235,6 +235,9 @@ input[id="bill"], input[id="people"]{
         border-radius: 5px; 
         border: none;
         max-height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover{
             cursor: pointer;
