@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/sass/main.css">
+  
+  <title>Tip calculator app</title>
+
+
+</head>
+<body>
+
+  <img src="./assets/images/logo.svg" alt="logo">
+
+  <div class="calculator">
+
+    <form>
+
+      <!-- Section Facture -->
+      <div>
+        <div style="display: flex; justify-content: space-between;"><label for="bill">Bill</label><div class="error-bill"></div></div>
+        <div class="bill-input-after"><input type="number" id="bill" name="bill" placeholder="0" step="0.01" min="0"></div>
+      </div>
+
+      <!-- Section Pourboire -->
+      <div class="select-tip">
+        <div style="display: flex; justify-content: space-between;"><label id="tip-label">Select Tip %</label><div class="error-tip"></div></div>
+        <div class="percent-options" role="group" aria-labelledby="tip-label">
+            <button 
+                type="button" 
+                class="btn_5" 
+                aria-label="add-5-percentage">
+                5%
+            </button>
+            <button 
+                type="button" 
+                class="btn_10" 
+                aria-label="add-10-percentage">
+                10%
+            </button>
+            <button 
+                type="button" 
+                class="btn_15" 
+                aria-label="add-15-percentage">
+                15%
+            </button>
+            <button 
+                type="button" 
+                class="btn_25" 
+                aria-label="add-25-percentage">
+                25%
+            </button>
+            <button 
+                type="button" 
+                class="btn_50" 
+                aria-label="add-50-percentage">
+                50%
+            </button>
+            <input 
+                id="custom" 
+                class="custom-percentage" 
+                type="number" 
+                max="100" 
+                placeholder="Custom"
+                aria-label="enter-custom-input" 
+            />
+        </div>
+      </div>
+
+      <!-- Section Nombre de Personnes -->
+      <div>
+        <div style="display: flex; justify-content: space-between;"><label for="people">Number of People</label><div class="error-people"></div></div>
+        <div class="people-input-after"><input type="number" id="people" name="people" placeholder="0" min="1"></div>
+      </div>
+
+    </form>
+
+    <div class="result-container">
+      <div class="montants">
+        <div>
+          <div>
+            <p>Tip Amount</p>
+            <p class="person">/ person</p>
+          </div>
+          <div class="tip-result">$0.00</div>
+        </div>
+        <div>
+          <div>
+            <p>Total</p>
+            <p class="person">/ person</p>
+          </div>
+          <div class="total-result">$0.00</div>
+        </div>
+      </div>
+      <button type="button" class="reset">RESET</button>
+    </div>
+
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
