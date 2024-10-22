@@ -6,7 +6,7 @@ const erreurPeople = document.querySelector(".error-people");
 const erreurTip = document.querySelector(".error-tip");
 const price = document.querySelector('.total-result');
 const tips = document.querySelector('.tip-result');
-
+const reset = document.querySelector(".reset")
 const tipButtons = document.querySelectorAll('.percent-options button');
 let selectedTip = 0;
 
@@ -45,6 +45,9 @@ const checkAllInputs = () => {
         // Calcul du prix total par personne
         let totalPrice = (parseFloat(inputBill.value) + pourboire) / parseInt(inputNumberPerson.value);
         price.textContent = totalPrice.toFixed(2); // Afficher avec 2 décimales
+
+        reset.style.backgroundColor = "#26C2AE"
+
     }
 }
 
@@ -84,7 +87,7 @@ inputCustomTip.addEventListener('input', () => {
 });
 
 
-const reset = document.querySelector(".reset")
+
 reset.addEventListener('click', () => {
     // Réinitialiser les inputs
     inputNumberPerson.value = '';
@@ -110,4 +113,6 @@ reset.addEventListener('click', () => {
 
     // Réinitialiser la sélection de pourboire
     selectedTip = 0;
+
+    reset.style.backgroundColor = "#0D686D"
 })
