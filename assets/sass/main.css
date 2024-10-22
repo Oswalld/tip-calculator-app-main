@@ -217,6 +217,7 @@ input[id=bill]::placeholder, input[id=people]::placeholder {
   padding: 17px 0;
   border-radius: 5px;
   border: none;
+  max-height: 48px;
 }
 .result-container button:hover {
   cursor: pointer;
